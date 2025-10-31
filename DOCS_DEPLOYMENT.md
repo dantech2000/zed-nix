@@ -15,7 +15,7 @@ A professional documentation website built with **MkDocs Material**:
 ## Preview Locally
 
 ```bash
-cd /Users/drodriguez/src/rainbow-indent
+cd /Users/drodriguez/src/zed-nix
 
 # Start development server (with live reload)
 python3 -m mkdocs serve

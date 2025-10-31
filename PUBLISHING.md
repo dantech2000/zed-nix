@@ -15,7 +15,7 @@ This guide explains how to publish the Nix language extension to the Zed extensi
 First, create a new repository on GitHub (e.g., `zed-nix-extension`), then:
 
 ```bash
-cd /Users/drodriguez/src/rainbow-indent
+cd /Users/drodriguez/src/zed-nix
 git remote add origin https://github.com/YOUR_USERNAME/zed-nix-extension.git
 git branch -M main
 git push -u origin main

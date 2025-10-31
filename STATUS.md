@@ -123,7 +123,7 @@ When nil is installed, provides:
 
 1. Open Zed:
    ```bash
-   zed /Users/drodriguez/src/rainbow-indent
+   zed /Users/drodriguez/src/zed-nix
    ```
 
 2. Install extension:

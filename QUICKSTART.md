@@ -27,7 +27,7 @@ zed .
 
 ### Step 1: Open in Zed
 ```bash
-zed /Users/drodriguez/src/rainbow-indent
+zed /Users/drodriguez/src/zed-nix
 ```
 
 ### Step 2: Install as Dev Extension

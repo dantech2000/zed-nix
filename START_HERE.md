@@ -16,7 +16,7 @@ A **fully functional Zed editor extension** for the Nix language!
 
 ### Step 1: Open in Zed
 ```bash
-zed /Users/drodriguez/src/rainbow-indent
+zed /Users/drodriguez/src/zed-nix
 ```
 
 ### Step 2: Install Extension

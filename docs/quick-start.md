@@ -7,7 +7,7 @@ Get your Nix extension running in 2 minutes!
 !!! tip "Fast Track"
     ```bash
     # 1. Open Zed
-    zed /Users/drodriguez/src/rainbow-indent
+    zed /Users/drodriguez/src/zed-nix
 
     # 2. In Zed, press Cmd+Shift+P
     # Type: "install dev extension"
@@ -34,7 +34,7 @@ Get your Nix extension running in 2 minutes!
 ### Step 1: Open in Zed
 
 ```bash
-zed /Users/drodriguez/src/rainbow-indent
+zed /Users/drodriguez/src/zed-nix
 ```
 
 ### Step 2: Install as Dev Extension

@@ -25,7 +25,7 @@ Expected output: Successful compilation with no errors.
    - macOS: `Cmd+Shift+P`
    - Linux: `Ctrl+Shift+P`
 3. Type: `zed: install dev extension`
-4. Select this directory (`/Users/drodriguez/src/rainbow-indent`)
+4. Select this directory (`/Users/drodriguez/src/zed-nix`)
 
 You should see a notification that the extension was installed successfully.
 

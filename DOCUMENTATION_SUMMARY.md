@@ -64,7 +64,7 @@ Your Documentation Website
 ## Preview NOW!
 
 ```bash
-cd /Users/drodriguez/src/rainbow-indent
+cd /Users/drodriguez/src/zed-nix
 
 # Start the server
 python3 -m mkdocs serve
@@ -157,7 +157,7 @@ theme:
 ## File Organization
 
 ```
-rainbow-indent/
+zed-nix/
 ├── docs/                       ← All documentation source
 │   ├── index.md               (Homepage)
 │   ├── quick-start.md         (Quick start)
@@ -405,7 +405,7 @@ You now have:
 **Go preview your docs now!** 🚀
 
 ```bash
-cd /Users/drodriguez/src/rainbow-indent
+cd /Users/drodriguez/src/zed-nix
 python3 -m mkdocs serve
 ```
 
