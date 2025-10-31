@@ -1,0 +1,90 @@
+site_name: Nix Language Extension for Zed
+site_description: Comprehensive Nix language support for Zed editor with syntax highlighting and LSP integration
+site_author: David Rodriguez
+repo_url: https://github.com/drodriguez/zed-nix
+repo_name: drodriguez/zed-nix
+
+theme:
+  name: material
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+  
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+nav:
+  - Home:
+    - Welcome: index.md
+    - Quick Start: quick-start.md
+    - Status: status.md
+  - User Guide:
+    - Overview: user-guide/overview.md
+    - Installation: user-guide/installation.md
+    - Features: user-guide/features.md
+  - Developer Guide:
+    - Testing: developer-guide/testing.md
+    - Publishing: developer-guide/publishing.md
+    - Project Summary: developer-guide/project-summary.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/drodriguez/zed-nix
+  version:
+    provider: mike
+
+plugins:
+  - search
+  - tags
+
+copyright: Copyright &copy; 2025 David Rodriguez - MIT License
+

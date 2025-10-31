@@ -17,3 +17,5 @@
 # Zed specific
 *.wasm
 
+# MkDocs
+/site/
