@@ -16,7 +16,7 @@ Complete guide to installing the Nix Language Extension for Zed.
 === "Dev Extension (Local)"
     ```bash
     # Clone and install
-    git clone https://github.com/drodriguez/zed-nix.git
+    git clone https://github.com/dantech2000/zed-nix.git
     # In Zed: Cmd+Shift+P → "install dev extension"
     # Select the cloned directory
     ```
@@ -107,7 +107,7 @@ Extensions installed from the registry auto-update when new versions are release
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/drodriguez/zed-nix.git
+   git clone https://github.com/dantech2000/zed-nix.git
    cd zed-nix
    ```
 
@@ -160,7 +160,7 @@ git submodule update --recursive
 
 3. **Clone and build:**
    ```bash
-   git clone https://github.com/drodriguez/zed-nix.git
+   git clone https://github.com/dantech2000/zed-nix.git
    cd zed-nix
    git submodule update --init --recursive
    cargo build --release --target wasm32-wasip1

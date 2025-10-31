@@ -131,14 +131,14 @@ IDE features powered by the `nil` language server:
 
 ## Getting Help
 
-- [:fontawesome-brands-github: GitHub Issues](https://github.com/drodriguez/zed-nix/issues)
+- [:fontawesome-brands-github: GitHub Issues](https://github.com/dantech2000/zed-nix/issues)
 - [:material-forum: Zed Discord](https://discord.gg/zed)
 - [:material-book: Zed Documentation](https://zed.dev/docs/extensions)
 - [:material-language-nix: nil LSP Server](https://github.com/oxalica/nil)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/drodriguez/zed-nix/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/dantech2000/zed-nix/blob/main/LICENSE) file for details.
 
 ---
 

@@ -1,8 +1,8 @@
 site_name: Nix Language Extension for Zed
 site_description: Comprehensive Nix language support for Zed editor with syntax highlighting and LSP integration
-site_author: David Rodriguez
-repo_url: https://github.com/drodriguez/zed-nix
-repo_name: drodriguez/zed-nix
+site_author: Daniel Rodriguez
+repo_url: https://github.com/dantech2000/zed-nix
+repo_name: dantech2000/zed-nix
 
 theme:
   name: material
@@ -78,7 +78,7 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/drodriguez/zed-nix
+      link: https://github.com/dantech2000/zed-nix
   version:
     provider: mike
 
@@ -86,5 +86,5 @@ plugins:
   - search
   - tags
 
-copyright: Copyright &copy; 2025 David Rodriguez - MIT License
+copyright: Copyright &copy; 2025 Daniel Rodriguez - MIT License
 

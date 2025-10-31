@@ -9,3 +9,10 @@ crate-type = ["cdylib"]
 [dependencies]
 zed_extension_api = "0.1.0"
 
+[profile.release]
+# Optimize for WASM binary size and performance
+opt-level = "z"      # Optimize for size
+lto = true           # Link-time optimization
+codegen-units = 1    # Better optimization at cost of compile time
+panic = "abort"      # Smaller binary (no panic unwinding)
+

@@ -2,7 +2,7 @@ id = "nix"
 name = "Nix Language Support"
 version = "0.1.0"
 schema_version = 1
-authors = ["David Rodriguez <you@example.com>"]
+authors = ["Daniel Rodriguez <dantech2000@gmail.com>"]
 description = "Syntax highlighting and LSP support for Nix language"
-repository = "https://github.com/drodriguez/zed-nix"
+repository = "https://github.com/dantech2000/zed-nix"
 

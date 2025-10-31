@@ -12,9 +12,10 @@ impl zed::Extension for NixExtension {
         _language_server_id: &zed::LanguageServerId,
         worktree: &zed::Worktree,
     ) -> Result<zed::Command> {
+        const NIL_NOT_FOUND: &str = "nil language server not found in PATH. Please install nil: https://github.com/oxalica/nil";
         let path = worktree
             .which("nil")
-            .ok_or_else(|| "nil language server not found in PATH. Please install nil: https://github.com/oxalica/nil".to_string())?;
+            .ok_or_else(|| NIL_NOT_FOUND.to_string())?;
 
         Ok(zed::Command {
             command: path,
