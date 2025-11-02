@@ -16,6 +16,15 @@
 
 # Zed specific
 *.wasm
+extension.wasm
 
 # MkDocs
 /site/
+
+# Zed grammars (managed by Zed)
+/grammars/
+
+# Troubleshooting files
+DIAGNOSTICS.md
+FIX_ATTEMPT.md
+TROUBLESHOOTING.md
