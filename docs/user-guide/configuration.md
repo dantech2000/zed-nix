@@ -2,6 +2,10 @@
 
 This guide explains how to configure the Nix Language Extension for Zed.
 
+## Important Note
+
+⚠️ **Zed extensions don't have GUI configuration panels.** All configuration is done by manually editing your `settings.json` file. This is the standard approach for all Zed extensions.
+
 ## Language Server Selection
 
 The extension supports two Nix language servers:
@@ -15,12 +19,13 @@ By default, **both language servers will be used** if they're installed in your 
 
 ### Choose a Specific Language Server
 
-To use only one language server, add this to your Zed `settings.json`:
+To use only one language server, you need to manually edit your Zed `settings.json`:
 
-**Open Settings:**
-- Press `Cmd+Shift+P` (or `Ctrl+Shift+P` on Linux)
-- Type: `zed: open settings`
-- Select "Open Settings"
+**Open Settings JSON:**
+
+1. Press `Cmd+,` (or `Ctrl+,` on Linux) to open settings
+2. Click **"Open JSON Settings"** in the top-right corner
+3. Or press `Cmd+Shift+P` → Type: `zed: open settings` → Select "Open Settings"
 
 #### Use Only nixd
 

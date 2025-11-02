@@ -6,6 +6,14 @@ authors = ["Daniel Rodriguez <dantech2000@gmail.com>"]
 description = "Syntax highlighting and LSP support for Nix language"
 repository = "https://github.com/dantech2000/zed-nix"
 
+[language_servers.nixd]
+name = "nixd"
+language = "Nix"
+
+[language_servers.nil]
+name = "nil"
+language = "Nix"
+
 [grammars.nix]
 repository = "https://github.com/cstrahan/tree-sitter-nix"
 rev = "ff4e2b4c5a3598e8be3edf16bc69f6677af32145"
