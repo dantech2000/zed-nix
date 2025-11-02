@@ -7,9 +7,10 @@ A comprehensive Nix language extension for Zed editor with syntax highlighting a
 ## Features
 
 - **Syntax Highlighting** - Full Tree-sitter powered highlighting
-- **LSP Integration** - IDE features via nil language server
+- **Dual LSP Support** - Choice between `nixd` (NixOS/home-manager) or `nil` (general purpose)
 - **Fast & Lightweight** - Compiled to WebAssembly
 - **Well Documented** - Complete user and developer guides
+- **Configurable** - Choose your preferred language server in settings
 
 ## Quick Start
 
@@ -22,15 +23,31 @@ Cmd+Shift+P → "zed: extensions" → Search "Nix" → Install
 
 ### Prerequisites
 
-Install nil language server for full LSP features:
+Install a Nix language server for full LSP features (choose one or both):
 
 ```bash
-# Using Nix
-nix-env -iA nixpkgs.nil
+# nixd (recommended for NixOS/home-manager users)
+nix-env -iA nixpkgs.nixd
 
-# Using Cargo
-cargo install --git https://github.com/oxalica/nil nil
+# nil (lightweight, general purpose)
+nix-env -iA nixpkgs.nil
 ```
+
+### Configuration
+
+Choose your preferred language server in Zed's `settings.json`:
+
+```json
+{
+  "languages": {
+    "Nix": {
+      "language_servers": ["nixd"]  // or ["nil"] or both
+    }
+  }
+}
+```
+
+See [Configuration Guide](https://dantech2000.github.io/zed-nix/user-guide/configuration) for detailed options.
 
 ## Documentation
 
@@ -38,6 +55,7 @@ cargo install --git https://github.com/oxalica/nil nil
 
 - [Quick Start Guide](https://dantech2000.github.io/zed-nix/quick-start)
 - [Installation Instructions](https://dantech2000.github.io/zed-nix/user-guide/installation)
+- [Configuration Guide](https://dantech2000.github.io/zed-nix/user-guide/configuration) - Choose nixd or nil
 - [Feature Details](https://dantech2000.github.io/zed-nix/user-guide/features)
 - [Developer Guide](https://dantech2000.github.io/zed-nix/developer-guide/testing)
 

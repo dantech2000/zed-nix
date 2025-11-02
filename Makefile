@@ -1,4 +1,4 @@
-.PHONY: help build install test clean check submodules docs serve
+.PHONY: help build install test clean check submodules docs serve reset
 
 # Default target
 help:
@@ -10,6 +10,7 @@ help:
 	@echo "  make install     - Build and prepare for dev extension install"
 	@echo "  make submodules  - Initialize and update git submodules"
 	@echo "  make clean       - Clean build artifacts"
+	@echo "  make reset       - Clean build artifacts AND grammar cache"
 	@echo "  make docs        - Build documentation site"
 	@echo "  make serve       - Serve documentation locally"
 	@echo "  make test       - Run extension checks"
@@ -19,6 +20,9 @@ help:
 	@echo "  2. Open Zed"
 	@echo "  3. Cmd+Shift+P → 'zed: install dev extension'"
 	@echo "  4. Select this directory"
+	@echo ""
+	@echo "Troubleshooting:"
+	@echo "  If you get grammar errors, run: make reset"
 
 # Build the extension in release mode
 build:
@@ -58,7 +62,14 @@ submodules:
 clean:
 	@echo "Cleaning build artifacts..."
 	@cargo clean
+	@rm -f extension.wasm
 	@echo "✅ Clean complete"
+
+# Clean everything including grammar cache (use if grammar compilation fails)
+reset: clean
+	@echo "Resetting grammar cache..."
+	@rm -rf grammars/
+	@echo "✅ Full reset complete - grammar will be re-downloaded on next install"
 
 # Build documentation
 docs:

@@ -69,6 +69,7 @@ nav:
   - User Guide:
     - Overview: user-guide/overview.md
     - Installation: user-guide/installation.md
+    - Configuration: user-guide/configuration.md
     - Features: user-guide/features.md
   - Developer Guide:
     - Testing: developer-guide/testing.md

@@ -4,3 +4,7 @@ path_suffixes = ["nix"]
 line_comments = ["# "]
 block_comment = ["/* ", " */"]
 
+# Language servers (both supported)
+# Users can configure preference in settings.json
+language_servers = ["nixd", "nil"]
+

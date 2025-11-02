@@ -9,27 +9,40 @@ impl zed::Extension for NixExtension {
 
     fn language_server_command(
         &mut self,
-        _language_server_id: &zed::LanguageServerId,
+        language_server_id: &zed::LanguageServerId,
         worktree: &zed::Worktree,
     ) -> Result<zed::Command> {
-        // Try nixd first (better for NixOS/home-manager options), fallback to nil
-        if let Some(path) = worktree.which("nixd") {
-            return Ok(zed::Command {
-                command: path,
-                args: vec![],
-                env: Default::default(),
-            });
-        }
+        // Support both nixd and nil language servers
+        // Users can configure preference in their settings.json:
+        //   "languages": { "Nix": { "language_servers": ["nixd", "!nil"] } }
         
-        if let Some(path) = worktree.which("nil") {
-            return Ok(zed::Command {
-                command: path,
-                args: vec![],
-                env: Default::default(),
-            });
+        let server_name = language_server_id.as_ref();
+        
+        match server_name {
+            "nixd" => {
+                if let Some(path) = worktree.which("nixd") {
+                    Ok(zed::Command {
+                        command: path,
+                        args: vec![],
+                        env: Default::default(),
+                    })
+                } else {
+                    Err("nixd not found in PATH. Install with:\n  nix-env -iA nixpkgs.nixd\n  or: nix profile install nixpkgs#nixd".to_string())
+                }
+            }
+            "nil" => {
+                if let Some(path) = worktree.which("nil") {
+                    Ok(zed::Command {
+                        command: path,
+                        args: vec![],
+                        env: Default::default(),
+                    })
+                } else {
+                    Err("nil not found in PATH. Install with:\n  nix-env -iA nixpkgs.nil\n  or: nix profile install nixpkgs#nil".to_string())
+                }
+            }
+            _ => Err(format!("Unknown language server: {}", server_name))
         }
-
-        Err("No Nix language server found. Install nixd (recommended for NixOS/home-manager) or nil:\n  nix-env -iA nixpkgs.nixd\n  or: nix-env -iA nixpkgs.nil".to_string())
     }
 }
 
