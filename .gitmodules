@@ -1,3 +1,0 @@
-[submodule "languages/nix/tree-sitter-nix"]
-	path = languages/nix/tree-sitter-nix
-	url = https://github.com/cstrahan/tree-sitter-nix.git
